@@ -1,0 +1,3 @@
+[submodule "Plugins/EnTTForUnreal/Source/ThirdParty/EnTT/entt"]
+	path = Plugins/EnTTForUnreal/Source/ThirdParty/EnTT/entt
+	url = https://github.com/skypjack/entt.git

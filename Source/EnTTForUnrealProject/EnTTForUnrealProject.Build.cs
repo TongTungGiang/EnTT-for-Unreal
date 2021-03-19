@@ -6,9 +6,19 @@ public class EnTTForUnrealProject : ModuleRules
 {
 	public EnTTForUnrealProject(ReadOnlyTargetRules Target) : base(Target)
 	{
+		// These settings are needed for EnTT as it uses C++17
+		CppStandard = CppStandardVersion.Cpp17;
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(
+			new string[]
+			{
+				"Core",
+				"CoreUObject",
+				"Engine",
+				"InputCore",
+				"EnTTForUnreal"
+			});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
