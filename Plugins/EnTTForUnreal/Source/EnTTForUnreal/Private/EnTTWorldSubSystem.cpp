@@ -47,34 +47,6 @@ void UEnTTWorldSubSystem::UpdateSystems(float DeltaTime)
 	}
 }
 
-template <typename T>
-FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem(const FString Name)
-{
-	FSystem* System = new T();
-
-	if (System)
-	{
-		System->Name = Name;
-		Systems.push_back(System);
-		NamedSystems.Add(Name, System);
-	}
-	return System;
-}
-
-template <typename T>
-FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem()
-{
-	FSystem* System = new T();
-
-	if (System)
-	{
-		System->Name = "Unnamed";
-		Systems.push_back(System);
-		//NamedSystems.Add(Name, System);
-	}
-	return System;
-}
-
 void UEnTTWorldSubSystem::RegisterSystem(FSystem* NewSystem, const FString Name)
 {
 	Systems.push_back(NewSystem);

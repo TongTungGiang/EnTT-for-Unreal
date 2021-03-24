@@ -74,3 +74,32 @@ private:
 	std::vector<FSystem*> Systems;
 };
 
+
+
+template <typename T>
+FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem(const FString Name)
+{
+	FSystem* System = static_cast<FSystem*>(new T());
+
+	if (System)
+	{
+		System->Name = Name;
+		Systems.push_back(System);
+		NamedSystems.Add(Name, System);
+	}
+	return System;
+}
+
+template <typename T>
+FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem()
+{
+	FSystem* System = static_cast<FSystem*>(new T());
+
+	if (System)
+	{
+		System->Name = "Unnamed";
+		Systems.push_back(System);
+	}
+	return System;
+}
+
