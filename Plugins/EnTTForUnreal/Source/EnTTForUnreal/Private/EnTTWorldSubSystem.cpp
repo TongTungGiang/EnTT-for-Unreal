@@ -2,8 +2,6 @@
 
 #include "EnTTWorldSubSystem.h"
 
-DEFINE_LOG_CATEGORY(LogEnTTSystem)
-
 void UEnTTWorldSubSystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	UE_LOG(LogEnTTSystem, Log, TEXT("Initialized EnTTWorldSubSystem."))

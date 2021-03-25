@@ -4,22 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "EnTTForUnreal.h"
-#include "entity/registry.hpp"
 #include "EnTTWorldSubSystem.generated.h"
-
-DECLARE_LOG_CATEGORY_EXTERN(LogEnTTSystem, Log, All)
-DECLARE_CYCLE_STAT(TEXT("EnTT: Total System Update"), STAT_TotalUpdate, STATGROUP_EnTT);
-
-using FRegistry = entt::registry;
-using EEntity = entt::entity;
-
-struct FSystem
-{
-	FString Name;
-	virtual ~FSystem() {}
-	virtual void Initialize() {}
-	virtual void Update(FRegistry& Registry, float DeltaTime) = 0;
-};
 
 /**
  * A world subsystem providing an interface to the EnTT framework
