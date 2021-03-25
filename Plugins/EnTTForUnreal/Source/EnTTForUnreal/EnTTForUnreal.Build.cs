@@ -41,6 +41,9 @@ public class EnTTForUnreal : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "UnrealEd",
+                "Blutility",
+                "UMG"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
