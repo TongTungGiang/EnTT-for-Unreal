@@ -2,6 +2,7 @@
 
 #include "EnTTForUnreal.h"
 
+DEFINE_LOG_CATEGORY(LogEnTTSystem)
 #define LOCTEXT_NAMESPACE "FEnTTForUnrealModule"
 
 void FEnTTForUnrealModule::StartupModule()

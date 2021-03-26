@@ -2,8 +2,6 @@
 
 #include "EnTTWorldSubSystem.h"
 
-DEFINE_LOG_CATEGORY(LogEnTTSystem)
-
 void UEnTTWorldSubSystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	UE_LOG(LogEnTTSystem, Log, TEXT("Initialized EnTTWorldSubSystem."))
@@ -45,34 +43,6 @@ void UEnTTWorldSubSystem::UpdateSystems(float DeltaTime)
 	{
 		System->Update(Registry, DeltaTime);
 	}
-}
-
-template <typename T>
-FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem(const FString Name)
-{
-	FSystem* System = new T();
-
-	if (System)
-	{
-		System->Name = Name;
-		Systems.push_back(System);
-		NamedSystems.Add(Name, System);
-	}
-	return System;
-}
-
-template <typename T>
-FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem()
-{
-	FSystem* System = new T();
-
-	if (System)
-	{
-		System->Name = "Unnamed";
-		Systems.push_back(System);
-		//NamedSystems.Add(Name, System);
-	}
-	return System;
 }
 
 void UEnTTWorldSubSystem::RegisterSystem(FSystem* NewSystem, const FString Name)
