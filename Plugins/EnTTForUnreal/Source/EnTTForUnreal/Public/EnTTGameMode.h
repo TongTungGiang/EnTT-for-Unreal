@@ -1,6 +1,6 @@
-#pragma once
+// Copyright Gravinator Games. All Rights Reserved.
 
-#include "CoreMinimal.h"
+#pragma once
 
 #include "GameFramework/GameMode.h"
 #include "EnTTGameMode.generated.h"

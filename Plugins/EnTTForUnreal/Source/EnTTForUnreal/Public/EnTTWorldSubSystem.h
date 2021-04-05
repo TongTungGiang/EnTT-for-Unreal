@@ -2,9 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "EnTTForUnreal.h"
-#include "EnTTSystem.h"
+#include "EnTTCore.h"
 #include "EnTTWorldSubSystem.generated.h"
 
 /**

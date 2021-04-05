@@ -1,5 +1,6 @@
 ﻿// Copyright Gravinator Games. All Rights Reserved.
 
+#include "EnTTForUnreal.h"
 #include "EnTTWorldSubSystem.h"
 
 void UEnTTWorldSubSystem::Initialize(FSubsystemCollectionBase& Collection)

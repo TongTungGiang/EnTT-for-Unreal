@@ -1,10 +1,7 @@
-
-
+// Copyright Gravinator Games. All Rights Reserved.
 
 #include "EnTTGameMode.h"
-
 #include "EnTTWorldSubSystem.h"
-
 
 // Sets default values
 AEnTTGameMode::AEnTTGameMode()
@@ -21,7 +18,7 @@ void AEnTTGameMode::BeginPlay()
 	EnTTWorld = GetWorld()->GetSubsystem<UEnTTWorldSubSystem>();
 
 	CreateAndRegisterSystems();
-	
+
 	EnTTWorld->InitializeSystems();
 }
 
@@ -37,4 +34,3 @@ void AEnTTGameMode::CreateAndRegisterSystems()
 {
 	
 }
-
