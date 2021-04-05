@@ -35,7 +35,7 @@ void UEnTTWorldSubSystem::InitializeSystems()
 	}
 }
 
-void UEnTTWorldSubSystem::UpdateSystems(float DeltaTime)
+void UEnTTWorldSubSystem::UpdateSystems(const float DeltaTime)
 {
 	SCOPE_CYCLE_COUNTER(STAT_TotalUpdate)
 

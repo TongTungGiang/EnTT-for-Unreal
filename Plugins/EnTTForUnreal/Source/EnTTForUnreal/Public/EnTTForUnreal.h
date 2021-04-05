@@ -15,14 +15,6 @@ DECLARE_CYCLE_STAT(TEXT("EnTT: Total System Update"), STAT_TotalUpdate, STATGROU
 using FRegistry = entt::registry;
 using EEntity = entt::entity;
 
-struct FSystem
-{
-	FString Name;
-	virtual ~FSystem() {}
-	virtual void Initialize() {}
-	virtual void Update(FRegistry& Registry, float DeltaTime) = 0;
-};
-
 class FEnTTForUnrealModule : public IModuleInterface
 {
 public:

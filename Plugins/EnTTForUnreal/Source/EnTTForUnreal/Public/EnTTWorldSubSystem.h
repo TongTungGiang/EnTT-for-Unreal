@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "EnTTForUnreal.h"
+#include "EnTTSystem.h"
 #include "EnTTWorldSubSystem.generated.h"
 
 /**
@@ -58,8 +59,6 @@ private:
 	TMap<FString, FSystem*> NamedSystems;
 	std::vector<FSystem*> Systems;
 };
-
-
 
 template <typename T>
 FSystem* UEnTTWorldSubSystem::CreateAndRegisterSystem(const FString Name)
