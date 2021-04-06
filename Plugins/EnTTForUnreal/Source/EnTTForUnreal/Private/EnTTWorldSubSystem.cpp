@@ -12,6 +12,7 @@ void UEnTTWorldSubSystem::Deinitialize()
 {
 	for (FSystem* System : Systems)
 	{
+		System->Exit(Registry);
 		delete System;
 	}
 	

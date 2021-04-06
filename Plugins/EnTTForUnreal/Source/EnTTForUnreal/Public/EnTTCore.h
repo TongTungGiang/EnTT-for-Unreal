@@ -24,4 +24,5 @@ struct FSystem
 	virtual ~FSystem() = default;
 	virtual void Initialize(FRegistry& Registry) {};
 	virtual void Update(FRegistry& Registry, float DeltaTime) {};
+	virtual void Exit(FRegistry& Registry) {};
 };
