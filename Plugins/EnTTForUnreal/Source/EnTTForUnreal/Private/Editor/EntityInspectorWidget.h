@@ -20,5 +20,8 @@ public:
 	~UEntityInspectorWidget();
 
 	UFUNCTION(BlueprintCallable)
-	void Foo();
+	void Foo(const FString& EntityId);
+
+	UFUNCTION(BlueprintCallable)
+	UWorld* GetGameplayWorld();
 };

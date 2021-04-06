@@ -22,6 +22,6 @@ struct FSystem
 	FString Name;
 
 	virtual ~FSystem() = default;
-	virtual void Initialize() {};
+	virtual void Initialize(FRegistry& Registry) {};
 	virtual void Update(FRegistry& Registry, float DeltaTime) {};
 };

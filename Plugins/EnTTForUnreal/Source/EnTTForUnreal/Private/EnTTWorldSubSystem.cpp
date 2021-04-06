@@ -1,7 +1,7 @@
 ﻿// Copyright Gravinator Games. All Rights Reserved.
 
-#include "EnTTForUnreal.h"
 #include "EnTTWorldSubSystem.h"
+#include "EnTTForUnreal.h"
 
 void UEnTTWorldSubSystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -32,7 +32,7 @@ void UEnTTWorldSubSystem::InitializeSystems()
 {
 	for (FSystem* System : Systems)
 	{
-		System->Initialize();
+		System->Initialize(Registry);
 	}
 }
 
