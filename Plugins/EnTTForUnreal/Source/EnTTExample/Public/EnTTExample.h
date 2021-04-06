@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 
-DECLARE_LOG_CATEGORY_EXTERN(LogEnTTSystem, Log, All)
+DECLARE_LOG_CATEGORY_EXTERN(LogEnTTExample, Log, All)
 
-class FEnTTForUnrealModule : public IModuleInterface
+class FEnTTExampleModule : public IModuleInterface
 {
 public:
 	/** IModuleInterface implementation */
