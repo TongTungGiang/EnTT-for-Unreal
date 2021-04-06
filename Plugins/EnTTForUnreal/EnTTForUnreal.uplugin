@@ -19,6 +19,11 @@
 			"Name": "EnTTForUnreal",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "EnTTExample",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	]
 }
