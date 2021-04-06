@@ -25,7 +25,7 @@ void UEntityInspectorWidget::Foo(const FString& EntityId)
 		return;
 	}
 
-	UE_LOG(LogTemp, Log, TEXT("UEntityInspectorWidget World: %d"), World->GetUniqueID());
+	UE_LOG(LogEnTTSystem, Log, TEXT("UEntityInspectorWidget World: %d"), World->GetUniqueID());
 	UEnTTWorldSubSystem* EnttSubsystem = World->GetSubsystem<UEnTTWorldSubSystem>();
 	if (EnttSubsystem == nullptr)
 	{
@@ -40,9 +40,10 @@ void UEntityInspectorWidget::Foo(const FString& EntityId)
 	if (!Registry.valid(Entity))
 	{
 		UE_LOG(LogEnTTSystem, Log, TEXT("Entity %d is not valid"), Entity);
+		return;
 	}
 
-	UE_LOG(LogTemp, Log, TEXT("Iterating through component list of test entity: %d"), Entity);
+	UE_LOG(LogEnTTSystem, Log, TEXT("Iterating through component list of test entity: %d"), Entity);
 	Registry.visit(Entity, [Entity](const entt::type_info TypeInfo)
 		{
 			std::string StdTypeName = std::string(TypeInfo.name());
