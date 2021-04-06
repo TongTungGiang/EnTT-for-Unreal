@@ -26,6 +26,8 @@ void AEnTTExampleGameMode::Tick(float DeltaTime)
 
 void AEnTTExampleGameMode::CreateAndRegisterSystems()
 {
+	EnTTWorld->CreateAndRegisterSystem<FRegisterComponentsSystem>();
+	EnTTWorld->CreateAndRegisterSystem<FCreateExampleEntitiesSystem>();
 	EnTTWorld->CreateAndRegisterSystem<FMovementSystem>();
 }
 
